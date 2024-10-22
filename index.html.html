@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Business Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c850c0, #4158d0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .business-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .business-card:hover {
+            transform: translateY(-10px);
+        }
+        .business-card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .business-card h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+        }
+        .business-card p {
+            margin: 5px 0;
+            color: #eee;
+        }
+        .business-card a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+
+ .business-card .email a {
+            color: #ffdd57 !important; /* Ensure the email color is applied */
+        }
+        .business-card .phone a {
+            color: #42f5dd !important; /* Ensure the phone number color is applied */
+        }
+
+
+        .business-card .social-links {
+            margin-top: 15px;
+        }
+        .business-card .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #eee;
+            font-size: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .business-card .social-links a:hover {
+            transform: scale(1.2);
+            color: #007BFF;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .business-card img, .business-card h1, .business-card p, .business-card .social-links {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        .business-card img {
+            animation-delay: 0.2s;
+        }
+        .business-card h1 {
+            animation-delay: 0.4s;
+        }
+        .business-card p {
+            animation-delay: 0.6s;
+        }
+        .business-card .social-links {
+            animation-delay: 0.8s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <img src="doraemon.jpg" alt="Profile Picture">
+        <h1>Your Name</h1>
+        <p>Job Title</p>
+        <p>Company Name</p>
+        <p id='contact'>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p id='contact'>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</body>
+</html>
